@@ -1,0 +1,16 @@
+.setColor('#0099ff')
+	.setTitle('')
+	.setURL('')
+	.setAuthor({ name: '', iconURL: '', url: '' })
+	.setDescription('')
+	.setThumbnail('')
+	.addFields(
+		{ name: '', value: '' },
+		{ name: '', value: '' },
+		{ name: '', value: '', inline: true },
+		{ name: '', value: '', inline: true },
+	)
+	.addField('', 'Some value here', true)
+	.setImage('https://i.imgur.com/AfFp7pu.png')
+	.setTimestamp()
+	.setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });

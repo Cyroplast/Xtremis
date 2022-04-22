@@ -1,0 +1,27 @@
+client.on('messageCreate',async(message)=>{
+  if (message.content === "'ping"){
+    if(Math.floor(Math.random() * 21) === 1){
+      message.channel.send("Oops! It looks like the ping-pong ball hit the net, I get a point :-)")
+        BotPoints += 1
+      } else if (Math.floor(Math.random() * 21) === 2){
+     message.channel.send("Oops! It looks like I missed the hit! You gain a point.. :(")
+        UserPoints += 1
+      } else {
+        message.channel.send("Pong!");
+      }
+  } else if (message.content === "'userpoints"){
+    message.channel.send("You have " + String(UserPoints) + " points.");
+  } else if (message.content === "'help"){
+    message.channel.send(commandhelp);
+  } else if (message.content === "'mention"){
+  message.reply("You have been mentioned.");
+  } else if (message.content === "'embed"){
+    const testembed = new Discord.MessageEmbed()
+    .setColor("#ffff00")
+  
+    .setTitle('Test Embed')
+    .setDescription('It works!!!')
+
+  message.channel.send({ embeds: [testembed] });
+  }
+})
